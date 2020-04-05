@@ -176,9 +176,9 @@ for epoch in range(num_epochs):
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-        
-        if (i+1) % 50 == 0:
-            print ("Epoch [{}/{}], Step [{}/{}] Loss: {:.4f}"
+
+        if (i+1) % 10 == 0:
+		print ("Epoch [{}/{}], Step [{}/{}] Loss: {:.4f}"
                    .format(epoch+1, num_epochs, i+1, total_step, loss.item()))
 
     # Decay learning rate
